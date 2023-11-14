@@ -37,7 +37,7 @@ public class Buku {
                     preparedStatement.setString(4, tahun_terbit);
                     preparedStatement.executeUpdate();
                     showData();
-                    JOptionPane.showMessageDialog(null, "data berhasil ditambahkan");
+                    JOptionPane.showMessageDialog(null, "Data berhasil ditambahkan");
                 } catch (SQLException err){
                     Logger.getLogger(DataInterface.class.getName()).log(Level.SEVERE, null, err);
                 }
