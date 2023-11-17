@@ -28,7 +28,7 @@ public class DeletePanel {
                         err.printStackTrace();
                     }
                 } else {
-                    JOptionPane.showMessageDialog(null, "id tidak boleh kosong");
+                    JOptionPane.showMessageDialog(null, "id ini tidak boleh kosong");
                 }
             }
         });
