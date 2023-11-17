@@ -37,7 +37,7 @@ public class UpdatePanel {
                         exception.printStackTrace();
                     }
                 } else {
-                    JOptionPane.showMessageDialog(null, "data tidak boleh kosong");
+                    JOptionPane.showMessageDialog(null, "data ini tidak boleh kosong");
                 }
 
             }
