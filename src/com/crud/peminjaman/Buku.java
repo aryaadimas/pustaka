@@ -78,7 +78,7 @@ public class Buku {
         }
     }
 
-    public JPanel getMainBukuPanel() {
+    public JPanel getMainPanel(){
         showData();
         return mainBukuPanel;
     }

@@ -41,8 +41,7 @@ public class DataInterface {
         });
         UpdateButton.addActionListener(new ActionListener() {
             @Override
-            public void actionPerformed(ActionEvent e) {
-                SwingUtilities.invokeLater(DataInterface::createUpdateGUI);
+            public void actionPerformed(ActionEvent e) { SwingUtilities.invokeLater(DataInterface::createUpdateGUI);
             }
         });
         DeleteButton.addActionListener(new ActionListener() {
@@ -51,10 +50,14 @@ public class DataInterface {
                 SwingUtilities.invokeLater(DataInterface::createDeleteGUI);
             }
         });
-        DatabukuButton.addActionListener(new ActionListener() {
-            @Override
-            public void actionPerformed(ActionEvent e) { SwingUtilities.invokeLater((DataInterface::createbukuGUI));
 
+
+        kembaliButton.addActionListener(new ActionListener() {
+            @Override
+            public void actionPerformed(ActionEvent e) {
+                JComponent component = (JComponent) e.getSource();
+                Window window = SwingUtilities.getWindowAncestor(component);
+                window.dispose();
             }
         });
     }
@@ -118,18 +121,9 @@ public class DataInterface {
         frame.setVisible(true);
     }
 
-    private static void createbukuGUI() {
-        Buku bukuUI = new Buku();
-        JPanel deleteRoot = bukuUI.getMainBukuPanel();
 
-        JFrame frame = new JFrame();
-        frame.setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
-        frame.setContentPane(deleteRoot);
-        frame.setPreferredSize(new Dimension(450,600));
-        frame.pack();
-        frame.setLocationRelativeTo(null);
-        frame.setVisible(true);
-    }
+
+
     private JPanel mainPanel;
     private JLabel JTitlePanel;
     private JTextField jTextFieldNama;
@@ -147,7 +141,49 @@ public class DataInterface {
     private JLabel jLabelBuku;
     private JLabel jLabelTanggal;
     private JLabel jLabelTenggat;
-    private JButton DatabukuButton;
-    private JPanel jFourthPanel;
+    private JButton kembaliButton;
     private JTextField JtextSearch;
+
+
+    public static void createBukuGUI()
+    {
+
+            Buku bukuUI = new Buku();
+            JPanel bukuRoot = bukuUI.getMainPanel();
+
+            JFrame frame = new JFrame();
+            frame.setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
+            frame.setContentPane(bukuRoot);
+            frame.setPreferredSize(new Dimension(450,600));
+            frame.pack();
+            frame.setLocationRelativeTo(null);
+            frame.setVisible(true);
+
+    }
+
+    public static void createriwayatGUI() {
+        riwayat_peminjaman riwayatUI = new riwayat_peminjaman();
+        JPanel riwayatRoot = riwayatUI.getMainRiwayatPanel();
+
+        JFrame frame = new JFrame();
+        frame.setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
+        frame.setContentPane(riwayatRoot);
+        frame.setPreferredSize(new Dimension(530,380));
+        frame.pack();
+        frame.setLocationRelativeTo(null);
+        frame.setVisible(true);
+    }
+
+    public static void createGUI(){
+        DataInterface UI = new DataInterface();
+        JPanel root = UI.getMainPanel();
+
+        JFrame frame = new JFrame();
+        frame.setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
+        frame.setContentPane(root);
+        frame.setPreferredSize(new Dimension(600,700));
+        frame.pack();
+        frame.setLocationRelativeTo(null);
+        frame.setVisible(true);
+    }
 }

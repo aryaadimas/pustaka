@@ -35,6 +35,7 @@
               <grid row="0" column="0" row-span="1" col-span="1" vsize-policy="0" hsize-policy="0" anchor="8" fill="0" indent="0" use-parent-layout="false"/>
             </constraints>
             <properties>
+              <font name="Times New Roman"/>
               <text value="id"/>
             </properties>
           </component>
@@ -44,7 +45,9 @@
                 <preferred-size width="150" height="-1"/>
               </grid>
             </constraints>
-            <properties/>
+            <properties>
+              <font name="Times New Roman"/>
+            </properties>
           </component>
           <hspacer id="7622d">
             <constraints>
@@ -66,6 +69,7 @@
               <grid row="0" column="0" row-span="1" col-span="1" vsize-policy="0" hsize-policy="3" anchor="0" fill="1" indent="0" use-parent-layout="false"/>
             </constraints>
             <properties>
+              <font name="Times New Roman"/>
               <text value="Batal"/>
             </properties>
           </component>
@@ -74,6 +78,7 @@
               <grid row="0" column="1" row-span="1" col-span="1" vsize-policy="0" hsize-policy="3" anchor="0" fill="1" indent="0" use-parent-layout="false"/>
             </constraints>
             <properties>
+              <font name="Times New Roman"/>
               <text value="Hapus"/>
             </properties>
           </component>
@@ -89,6 +94,7 @@
           <grid row="3" column="0" row-span="1" col-span="1" vsize-policy="0" hsize-policy="0" anchor="8" fill="0" indent="0" use-parent-layout="false"/>
         </constraints>
         <properties>
+          <font name="Times New Roman"/>
           <text value="Masukkan id"/>
         </properties>
       </component>
